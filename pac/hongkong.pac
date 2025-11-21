@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*.findbiz.nat.gov.tw") ||
         shExpMatch(host, "www.e-services.cr.gov.hk") ||
         shExpMatch(host, "www.sgs.com") ||
-		shExpMatch(host, "2ip.ru") ||
+	shExpMatch(host, "2ip.ru") ||
         shExpMatch(host, "local.teams.office.com") ||
         shExpMatch(host, "local.teams.live.com") ||
         shExpMatch(host, "login.microsoftonline.com")
