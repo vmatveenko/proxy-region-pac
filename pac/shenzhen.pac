@@ -1,22 +1,22 @@
 function FindProxyForURL(url, host) {
+
     host = host.toLowerCase();
-    if (
-        shExpMatch(host, "g6.globalwits.cn") ||
-        shExpMatch(host, "*.g6.globalwits.cn") ||
-        shExpMatch(host, "hnyzxt.hnga.gov.cn") ||
-        shExpMatch(host, "*.hnyzxt.hnga.gov.cn") ||
-        shExpMatch(host, "findbiz.nat.gov.tw") ||
-        shExpMatch(host, "*.findbiz.nat.gov.tw") ||
-        shExpMatch(host, "e-services.cr.gov.hk") ||
-        shExpMatch(host, "*.e-services.cr.gov.hk") ||
-        shExpMatch(host, "sgs.com") ||
-        shExpMatch(host, "*.sgs.com") ||
-        shExpMatch(host, "2ip.ru") ||
-        shExpMatch(host, "*.2ip.ru") ||
-        shExpMatch(host, "eservices.dubaided.gov.ae") ||
-        shExpMatch(host, "*.eservices.dubaided.gov.ae")
-    ) {
-        return "PROXY 212.69.87.86:54100";
+
+    var proxyHosts = [
+        "g6.globalwits.cn",
+        "hnyzxt.hnga.gov.cn",
+        "findbiz.nat.gov.tw",
+        "e-services.cr.gov.hk",
+        "sgs.com",
+        "2ip.ru",
+        "eservices.dubaided.gov.ae"
+    ];
+
+    for (var i = 0; i < proxyHosts.length; i++) {
+        var d = proxyHosts[i];
+        if (host === d || shExpMatch(host, "*." + d)) {
+            return "PROXY 212.69.87.86:54100";
+        }
     }
 
     return "DIRECT";
