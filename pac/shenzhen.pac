@@ -9,7 +9,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "www.e-services.cr.gov.hk") ||
         shExpMatch(host, "www.sgs.com") ||
 	    shExpMatch(host, "2ip.ru") ||
-        shExpMatch(host, "https://eservices.dubaided.gov.ae/") 
+        shExpMatch(host, "eservices.dubaided.gov.ae") 
     ) {
         return "PROXY 212.69.87.86:54100";
     }
