@@ -15,7 +15,7 @@ function FindProxyForURL(url, host) {
     for (var i = 0; i < proxyHosts.length; i++) {
         var d = proxyHosts[i];
         if (host === d || shExpMatch(host, "*." + d)) {
-            return "PROXY 212.69.87.86:54100";
+            return "PROXY 212.69.87.86:54100; DIRECT";
         }
     }
 
