@@ -8,8 +8,7 @@ function FindProxyForURL(url, host) {
         "findbiz.nat.gov.tw",
         "e-services.cr.gov.hk",
         "sgs.com",
-        "2ip.ru",
-        "eservices.dubaided.gov.ae"
+        "2ip.io"
     ];
 
     for (var i = 0; i < proxyHosts.length; i++) {
