@@ -3,7 +3,6 @@ function FindProxyForURL(url, host) {
     host = host.toLowerCase();
 
     var proxyHosts = [
-        "g6.globalwits.cn",
         "hnyzxt.hnga.gov.cn",
         "findbiz.nat.gov.tw",
         "e-services.cr.gov.hk",
